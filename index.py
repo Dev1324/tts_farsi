@@ -27,8 +27,11 @@ def sey(url):
 
     pygame.quit()
 
-text = input('plz write text :')#.replace(" ", "+")
-
-tts = TTS(text)
-print(tts)
-sey(tts)
+while True:
+    text = input('plz write text :')#.replace(" ", "+")
+    if(text == "exit"):
+        break
+    else:
+        tts = TTS(text)
+        print(tts)
+        sey(tts)
